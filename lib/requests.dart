@@ -13,9 +13,9 @@ const privateKey = '9ec6789be82c8b2650af09855f88c8f9123e3208';
 final timestamp = DateTime.now().millisecondsSinceEpoch;
 final hash = generateMd5('$timestamp$privateKey$publicKey');
 
-Future<List<Character>> fetchMarvelCharacters() async {
+Future<List<Character>> fetchMarvelCharacters({int offset = 0}) async {
   String url =
-      "https://gateway.marvel.com/v1/public/characters?apikey=$publicKey&ts=$timestamp&hash=$hash";
+      "https://gateway.marvel.com/v1/public/characters?apikey=$publicKey&ts=$timestamp&hash=$hash&offset=$offset";
   final response = await http.get(Uri.parse(url));
 
   if (response.statusCode == 200) {

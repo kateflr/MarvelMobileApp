@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marvel_comics_app/screens/MainScreen.dart';
-import 'package:marvel_comics_app/screens/splashScreen.dart';
+import 'package:marvel_comics_app/screens/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
